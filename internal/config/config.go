@@ -50,6 +50,7 @@ type anchore struct {
 	Path          string `yaml:"path" mapstructure:"path"`                      // override the engine/enterprise API upload path
 	Username      string `yaml:"username" mapstructure:"username"`              // -u , username to authenticate upload
 	Password      string `yaml:"password" mapstructure:"password"`              // -p , password to authenticate upload
+	// add Dockerfile support...
 }
 
 // LoadApplicationConfig populates the given viper object with application configuration discovered on disk
@@ -119,6 +120,8 @@ func (cfg *Application) build() error {
 			}
 		}
 	}
+
+	// dockerfile validation....
 
 	return nil
 }

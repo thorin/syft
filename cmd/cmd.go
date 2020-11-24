@@ -112,6 +112,8 @@ func setGlobalCliOptions() {
 		os.Exit(1)
 	}
 
+	// add dockerfile support...
+
 }
 
 func initAppConfig() {

@@ -20,6 +20,7 @@ func (c *Client) Import(ctx context.Context, catalog *pkg.Catalog) (string, stri
 	// do the imports...
 
 	var importers = []importer{
+		// another dockerfile importer...
 		generatePackageSbomImporter(authedCtx, c.client.ImportsApi, sessionID, catalog),
 	}
 
